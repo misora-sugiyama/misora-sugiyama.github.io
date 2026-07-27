@@ -72,23 +72,27 @@ research:
 publications:
   kicker: 03 — Selected work
   title: 研究成果
-  intro: コンピュータビジョンと生成モデルに関するarXivプレプリントが2本あります。
+  intro: コンピュータビジョンと生成モデルに関する公開済みarXivプレプリントが1本、公開準備中のACCV論文が1本あります。
   items:
     - year: "2025"
-      status: ICCV 2025 Workshop
-      title: ワークショップ論文
-      copy: 正式タイトル、著者一覧、概要、arXivリンクは、公開表記の確認後に追加します。
+      status: arXiv · ICCV 2025 Workshop
+      title: Simple Visual Artifact Detection in Sora-Generated Videos
+      authors: Misora Sugiyama, Hirokatsu Kataoka
+      copy: Sora生成動画に見られる4種類の視覚的アーティファクトを検出するマルチラベル分類手法を提案し、ResNet-50で平均94.14%の分類精度を達成しました。
+      url: https://arxiv.org/abs/2504.21334
+      linkLabel: arXivで見る
+      tags:
+        - 動画生成
+        - アーティファクト検出
+        - マルチラベル分類
+    - year: 近日公開
+      status: ACCV投稿論文 · arXiv公開準備中
+      title: ACCV論文
+      copy: 現在arXiv版のアップロードを準備しています。公開後に正式タイトル、著者一覧、概要、リンクを追加します。
       tags:
         - Computer Vision
         - 生成モデル
-    - year: Current
-      status: Preprint · Under review
-      title: 生成ビジョンに関する研究
-      copy: 正式タイトル、著者一覧、概要、arXivリンクは、査読プロセス後に追加します。
-      tags:
-        - 画像・動画
-        - Image-to-Image
-  note: 査読中の原稿に関する情報は、現在必要最小限の表記にしています。
+  note: ACCV論文の詳細は、arXiv版の公開後すぐに更新します。
 
 affiliations:
   kicker: 04 — Community

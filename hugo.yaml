@@ -23,7 +23,7 @@ languages:
 
 params:
   author: Misora Sugiyama
-  email: misora.sugiyama.research@gmail.com
+  email: contact.misora.sugiyama@gmail.com
   description: Research portfolio of Misora Sugiyama, working on computer vision, image and video generation, and image-to-image models.
 
 disableKinds:

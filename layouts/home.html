@@ -1,0 +1,191 @@
+{{ define "main" }}
+  {{ $languageData := index hugo.Data .Lang }}
+  {{ $c := index $languageData "home" }}
+
+  <a class="skip-link" href="#main">{{ $c.skip }}</a>
+
+  <header class="site-header">
+    <a class="brand" href="{{ relLangURL "" }}" aria-label="{{ $c.brand.ariaLabel }}">
+      <span class="brand-mark" aria-hidden="true">MS</span>
+      <span class="brand-name">
+        {{ $c.brand.name }}
+        <small>{{ $c.brand.nameJa }}</small>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="{{ $c.nav.label }}">
+      {{ range $c.nav.items }}
+        <a href="#{{ .id }}">{{ .label }}</a>
+      {{ end }}
+    </nav>
+
+    {{ range .Translations }}
+      <a class="language-switch" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">
+        {{ .Language.Label }}
+      </a>
+    {{ end }}
+
+    <details class="mobile-menu">
+      <summary>{{ $c.nav.menu }}</summary>
+      <nav aria-label="{{ $c.nav.label }}">
+        {{ range $c.nav.items }}
+          <a href="#{{ .id }}">{{ .label }}</a>
+        {{ end }}
+        {{ range .Translations }}
+          <a href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.Label }}</a>
+        {{ end }}
+      </nav>
+    </details>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">{{ $c.hero.eyebrow }}</p>
+        <h1 id="hero-title">
+          {{ $c.hero.lineOne }}<br>
+          <em>{{ $c.hero.emphasis }}</em><br>
+          {{ $c.hero.lineTwo }}
+        </h1>
+        <p class="hero-intro">{{ $c.hero.intro }}</p>
+        <p class="affiliation-line">{{ $c.hero.affiliation }}</p>
+        <a class="text-link hero-link" href="#research">
+          <span>{{ $c.hero.cta }}</span>
+          <span aria-hidden="true">↘</span>
+        </a>
+      </div>
+
+      <div class="hero-visual" aria-label="{{ $c.hero.visualAlt }}">
+        <div class="visual-grid" aria-hidden="true">
+          <span class="visual-cell visual-cell-a"></span>
+          <span class="visual-cell visual-cell-b"></span>
+          <span class="visual-cell visual-cell-c"></span>
+          <span class="visual-cell visual-cell-d"></span>
+          <span class="visual-cell visual-cell-e"></span>
+          <span class="visual-cell visual-cell-f"></span>
+          <span class="visual-orbit visual-orbit-a"></span>
+          <span class="visual-orbit visual-orbit-b"></span>
+        </div>
+        <div class="visual-legend">
+          {{ range $index, $label := $c.hero.visualLabels }}
+            <span>
+              <i>{{ printf "%02d" (add $index 1) }}</i>
+              {{ $label }}
+            </span>
+          {{ end }}
+        </div>
+        <div class="field-card">
+          <span>{{ $c.hero.fieldLabel }}</span>
+          <strong>{{ $c.hero.fieldTitle }}</strong>
+          <p>{{ $c.hero.fieldCopy }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="section-label">
+        <p>{{ $c.about.kicker }}</p>
+      </div>
+      <div class="section-content about-grid">
+        <div>
+          <h2 id="about-title">{{ $c.about.title }}</h2>
+          {{ range $c.about.paragraphs }}
+            <p class="body-copy">{{ . }}</p>
+          {{ end }}
+        </div>
+        <blockquote>{{ $c.about.quote }}</blockquote>
+      </div>
+    </section>
+
+    <section class="section research-section" id="research" aria-labelledby="research-title">
+      <div class="section-label">
+        <p>{{ $c.research.kicker }}</p>
+      </div>
+      <div class="section-content">
+        <h2 id="research-title">{{ $c.research.title }}</h2>
+        <div class="research-list">
+          {{ range $c.research.items }}
+            <article class="research-item">
+              <span class="item-number">{{ .number }}</span>
+              <h3>{{ .title }}</h3>
+              <p>{{ .copy }}</p>
+              <div class="tag-list" aria-label="{{ .title }}">
+                {{ range .tags }}<span>{{ . }}</span>{{ end }}
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="section publication-section" id="publications" aria-labelledby="publications-title">
+      <div class="section-label">
+        <p>{{ $c.publications.kicker }}</p>
+      </div>
+      <div class="section-content">
+        <div class="section-heading-row">
+          <h2 id="publications-title">{{ $c.publications.title }}</h2>
+          <p>{{ $c.publications.intro }}</p>
+        </div>
+        <div class="publication-list">
+          {{ range $index, $item := $c.publications.items }}
+            <article class="publication-card">
+              <div class="publication-index">
+                <span>{{ printf "%02d" (add $index 1) }}</span>
+                <time>{{ $item.year }}</time>
+              </div>
+              <div class="publication-main">
+                <p class="publication-status">{{ $item.status }}</p>
+                <h3>{{ $item.title }}</h3>
+                <p>{{ $item.copy }}</p>
+                <div class="tag-list">
+                  {{ range $item.tags }}<span>{{ . }}</span>{{ end }}
+                </div>
+              </div>
+              <span class="publication-symbol" aria-hidden="true">◇</span>
+            </article>
+          {{ end }}
+        </div>
+        <p class="publication-note">{{ $c.publications.note }}</p>
+      </div>
+    </section>
+
+    <section class="section affiliations-section" id="affiliations" aria-labelledby="affiliations-title">
+      <div class="section-label">
+        <p>{{ $c.affiliations.kicker }}</p>
+      </div>
+      <div class="section-content">
+        <h2 id="affiliations-title">{{ $c.affiliations.title }}</h2>
+        <div class="affiliation-grid">
+          {{ range $c.affiliations.items }}
+            <article class="affiliation-card">
+              <span class="affiliation-mark">{{ .mark }}</span>
+              <div>
+                <h3>{{ .title }}</h3>
+                <p>{{ .copy }}</p>
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <p>{{ $c.contact.kicker }}</p>
+      <div>
+        <h2 id="contact-title">{{ $c.contact.title }}</h2>
+        <p>{{ $c.contact.copy }}</p>
+      </div>
+      <a class="contact-link" href="mailto:{{ .Site.Params.email }}">
+        <span>{{ $c.contact.linkLabel }}</span>
+        <strong>{{ .Site.Params.email }}</strong>
+        <i aria-hidden="true">↗</i>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© {{ now.Year }} {{ $c.footer.text }}</p>
+    <a href="#main">{{ $c.footer.backToTop }} ↑</a>
+  </footer>
+{{ end }}

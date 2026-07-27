@@ -1,0 +1,39 @@
+baseURL: https://misora-sugiyama.github.io/
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
+enableRobotsTXT: true
+hasCJKLanguage: true
+title: Misora Sugiyama
+
+languages:
+  en:
+    contentDir: content/en
+    locale: en
+    direction: ltr
+    label: English
+    title: Misora Sugiyama — Computer Vision & Generative AI
+    weight: 1
+  ja:
+    contentDir: content/ja
+    locale: ja-JP
+    direction: ltr
+    label: 日本語
+    title: 杉山未空 — Computer Vision & Generative AI
+    weight: 2
+
+params:
+  author: Misora Sugiyama
+  email: misora.sugiyama.research@gmail.com
+  description: Research portfolio of Misora Sugiyama, working on computer vision, image and video generation, and image-to-image models.
+
+disableKinds:
+  - taxonomy
+  - term
+  - RSS
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+minify:
+  minifyOutput: true

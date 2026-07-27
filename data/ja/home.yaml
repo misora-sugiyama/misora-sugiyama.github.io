@@ -1,0 +1,115 @@
+skip: 本文へ移動
+
+brand:
+  name: Misora Sugiyama
+  nameJa: 杉山 未空
+  ariaLabel: 杉山未空のホーム
+
+nav:
+  label: メインナビゲーション
+  menu: メニュー
+  items:
+    - id: about
+      label: プロフィール
+    - id: research
+      label: 研究
+    - id: publications
+      label: 研究成果
+    - id: affiliations
+      label: 所属
+    - id: contact
+      label: 連絡先
+
+hero:
+  eyebrow: コンピュータビジョン · 生成AI
+  lineOne: 視覚を理解し、
+  emphasis: 変換し、生成する
+  lineTwo: モデルへ。
+  intro: 杉山未空は、コンピュータビジョンと生成モデルを研究しています。特に画像・動画生成、Image-to-Imageモデルに取り組んでいます。
+  affiliation: NYU Tandon School of Engineering、LIMIT Lab、cvpaper.challengeに所属しています。
+  cta: 研究内容を見る
+  visualAlt: 生成ビジョンの流れを表す抽象的な図
+  visualLabels:
+    - 入力
+    - 潜在表現
+    - 動き
+    - 出力
+  fieldLabel: 研究領域
+  fieldTitle: Visual Intelligence
+  fieldCopy: 認識と生成をつなぎ、表現力・制御性・実用性を備えた視覚システムを目指します。
+
+about:
+  kicker: 01 — Profile
+  title: 視覚認識と生成のあいだを研究する。
+  paragraphs:
+    - コンピュータビジョンと生成AIの交差領域で研究しています。見栄えのよい画像を作るだけでなく、構造を理解し、意図を保ち、異なるドメイン間で視覚情報を変換できるモデルに関心があります。
+    - 現在の主な関心は、画像・動画生成、Image-to-Imageモデル、制御可能な生成、そして認識と生成を結ぶ表現学習です。
+  quote: 生成モデルを、優れた画像生成器から、優れた視覚的推論器へ進化させるには何が必要か。
+
+research:
+  kicker: 02 — Research
+  title: 研究テーマ
+  items:
+    - number: "01"
+      title: Computer Vision
+      copy: 物体、構造、文脈、変化を視覚データから捉える表現学習を探究します。
+      tags:
+        - 表現学習
+        - 視覚理解
+    - number: "02"
+      title: Image & Video Generation
+      copy: 一貫性、制御性、表現力を備えた画像・動画生成モデルを研究します。
+      tags:
+        - 拡散モデル
+        - 時間的一貫性
+    - number: "03"
+      title: Image-to-Image Models
+      copy: 重要な内容や意図を保ちながら、画像を異なるドメインへ変換する方法を研究します。
+      tags:
+        - 画像変換
+        - 制御
+
+publications:
+  kicker: 03 — Selected work
+  title: 研究成果
+  intro: コンピュータビジョンと生成モデルに関するarXivプレプリントが2本あります。
+  items:
+    - year: "2025"
+      status: ICCV 2025 Workshop
+      title: ワークショップ論文
+      copy: 正式タイトル、著者一覧、概要、arXivリンクは、公開表記の確認後に追加します。
+      tags:
+        - Computer Vision
+        - 生成モデル
+    - year: Current
+      status: Preprint · Under review
+      title: 生成ビジョンに関する研究
+      copy: 正式タイトル、著者一覧、概要、arXivリンクは、査読プロセス後に追加します。
+      tags:
+        - 画像・動画
+        - Image-to-Image
+  note: 査読中の原稿に関する情報は、現在必要最小限の表記にしています。
+
+affiliations:
+  kicker: 04 — Community
+  title: 所属・コミュニティ
+  items:
+    - mark: NYU
+      title: NYU Tandon School of Engineering
+      copy: Academic affiliation
+    - mark: LIM
+      title: LIMIT Lab
+      copy: Research community
+    - mark: CV
+      title: cvpaper.challenge
+      copy: Computer vision community
+
+contact:
+  kicker: 05 — Contact
+  title: 視覚知能について話しましょう。
+  copy: 研究、講演、共同研究などに関するご連絡は、メールでお気軽にお寄せください。
+  linkLabel: メールを送る
+
+footer:
+  text: 杉山未空 — Computer Vision & Generative AI
+  backToTop: ページ上部へ

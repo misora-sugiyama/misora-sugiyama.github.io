@@ -1,0 +1,115 @@
+skip: Skip to content
+
+brand:
+  name: Misora Sugiyama
+  nameJa: 杉山 未空
+  ariaLabel: Misora Sugiyama home
+
+nav:
+  label: Primary navigation
+  menu: Menu
+  items:
+    - id: about
+      label: About
+    - id: research
+      label: Research
+    - id: publications
+      label: Publications
+    - id: affiliations
+      label: Affiliations
+    - id: contact
+      label: Contact
+
+hero:
+  eyebrow: Computer Vision · Generative AI
+  lineOne: Exploring how machines
+  emphasis: see, translate,
+  lineTwo: and imagine.
+  intro: Misora Sugiyama researches computer vision and generative modeling, with a focus on image and video generation and image-to-image translation.
+  affiliation: Affiliated with NYU Tandon School of Engineering, LIMIT Lab, and cvpaper.challenge.
+  cta: Explore research
+  visualAlt: Abstract visualization of a generative vision pipeline
+  visualLabels:
+    - INPUT
+    - LATENT
+    - MOTION
+    - OUTPUT
+  fieldLabel: Research field
+  fieldTitle: Visual Intelligence
+  fieldCopy: Connecting perception and generation to build visual systems that are expressive, controllable, and useful.
+
+about:
+  kicker: 01 — About
+  title: Between visual perception and synthesis.
+  paragraphs:
+    - My work sits at the intersection of computer vision and generative AI. I am interested in models that do more than create convincing pixels—models that understand structure, preserve intent, and translate visual information across domains.
+    - Current interests include image and video generation, image-to-image models, controllable synthesis, and the representations that connect perception with generation.
+  quote: How can generative models become better visual reasoners—not only better image makers?
+
+research:
+  kicker: 02 — Research
+  title: Research directions
+  items:
+    - number: "01"
+      title: Computer Vision
+      copy: Learning representations that capture objects, structure, context, and change in visual data.
+      tags:
+        - Representation
+        - Understanding
+    - number: "02"
+      title: Image & Video Generation
+      copy: Studying generative models for coherent, controllable, and expressive visual synthesis.
+      tags:
+        - Diffusion
+        - Temporal coherence
+    - number: "03"
+      title: Image-to-Image Models
+      copy: Translating images across domains while preserving the content and intent that matter.
+      tags:
+        - Translation
+        - Control
+
+publications:
+  kicker: 03 — Selected work
+  title: Publications
+  intro: Two arXiv preprints spanning computer vision and generative modeling.
+  items:
+    - year: "2025"
+      status: ICCV 2025 Workshop
+      title: Workshop paper
+      copy: Full title, author list, abstract, and arXiv link will be added when the public wording is confirmed.
+      tags:
+        - Computer Vision
+        - Generative Models
+    - year: Current
+      status: Preprint · Under review
+      title: Generative vision study
+      copy: Full title, author list, abstract, and arXiv link will be added following the review process.
+      tags:
+        - Image / Video
+        - Image-to-Image
+  note: Submission details are intentionally kept minimal while the current manuscript is under review.
+
+affiliations:
+  kicker: 04 — Community
+  title: Affiliations
+  items:
+    - mark: NYU
+      title: NYU Tandon School of Engineering
+      copy: Academic affiliation
+    - mark: LIM
+      title: LIMIT Lab
+      copy: Research community
+    - mark: CV
+      title: cvpaper.challenge
+      copy: Computer vision community
+
+contact:
+  kicker: 05 — Contact
+  title: Let’s talk about visual intelligence.
+  copy: For research inquiries, talks, or potential collaborations, feel free to get in touch.
+  linkLabel: Email Misora
+
+footer:
+  text: Misora Sugiyama — Computer Vision & Generative AI
+  backToTop: Back to top

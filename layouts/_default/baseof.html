@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="{{ .Lang }}" dir="{{ .Language.Direction }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10201d">
+    <meta name="color-scheme" content="light">
+
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+    <meta name="author" content="{{ .Site.Params.author }}">
+
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+    <link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
+    {{ range .AllTranslations }}
+      <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+    {{ end }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Site.Home.Permalink }}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ .Site.Title }}">
+    <meta property="og:description" content="{{ .Description | default .Site.Params.description }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="Misora Sugiyama">
+    <meta name="twitter:card" content="summary">
+
+    {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+
+    {{ $person := dict
+      "@context" "https://schema.org"
+      "@type" "Person"
+      "name" "Misora Sugiyama"
+      "alternateName" "杉山未空"
+      "url" .Site.BaseURL
+      "email" (printf "mailto:%s" .Site.Params.email)
+      "affiliation" (slice
+        (dict "@type" "CollegeOrUniversity" "name" "NYU Tandon School of Engineering")
+        (dict "@type" "Organization" "name" "LIMIT Lab")
+        (dict "@type" "Organization" "name" "cvpaper.challenge")
+      )
+    }}
+    <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+  </head>
+  <body>
+    {{ block "main" . }}{{ end }}
+  </body>
+</html>

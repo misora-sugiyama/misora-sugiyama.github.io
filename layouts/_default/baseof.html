@@ -35,6 +35,7 @@
       "alternateName" "杉山未空"
       "url" .Site.BaseURL
       "email" (printf "mailto:%s" .Site.Params.email)
+      "sameAs" (slice .Site.Params.orcid .Site.Params.linkedin)
       "affiliation" (slice
         (dict "@type" "CollegeOrUniversity" "name" "NYU Tandon School of Engineering")
         (dict "@type" "Organization" "name" "LIMIT Lab")

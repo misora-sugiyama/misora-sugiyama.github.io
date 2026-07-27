@@ -9,37 +9,46 @@ nav:
   label: メインナビゲーション
   menu: メニュー
   items:
-    - id: about
-      label: プロフィール
-    - id: research
-      label: 研究
     - id: publications
       label: 研究成果
+    - id: research
+      label: 研究
+    - id: about
+      label: プロフィール
     - id: affiliations
       label: 所属
     - id: contact
       label: 連絡先
 
 hero:
-  eyebrow: コンピュータビジョン · 生成AI
-  lineOne: 視覚を理解し、
-  emphasis: 変換し、生成する
-  lineTwo: モデルへ。
+  eyebrow: 研究者プロフィール
+  name: 杉山 未空
+  nameSecondary: Misora Sugiyama
+  role: Computer Vision · Image & Video Generation
   intro: 杉山未空は、コンピュータビジョンと生成モデルを研究しています。特に画像・動画生成、Image-to-Imageモデルに取り組んでいます。
-  affiliation: NYU Tandon School of Engineering、LIMIT Lab、cvpaper.challengeに所属しています。
-  cta: 研究内容を見る
-  visualAlt: 生成ビジョンの流れを表す抽象的な図
-  visualLabels:
-    - 入力
-    - 潜在表現
-    - 動き
-    - 出力
-  fieldLabel: 研究領域
-  fieldTitle: Visual Intelligence
-  fieldCopy: 認識と生成をつなぎ、表現力・制御性・実用性を備えた視覚システムを目指します。
+  affiliations:
+    - NYU Tandon School of Engineering
+    - LIMIT Lab
+    - cvpaper.challenge
+  links:
+    email: メール
+    orcid: ORCID
+    linkedin: LinkedIn
+  researchLabel: 研究分野
+  researchTitle: 主な研究テーマ
+  researchCopy: 視覚認識・生成・制御可能な変換をつなぐモデルを研究しています。
+  interests:
+    - title: Computer Vision
+      copy: 表現学習・視覚理解
+    - title: Image Generation
+      copy: 画像生成モデル
+    - title: Video Generation
+      copy: 動画生成・時間的一貫性
+    - title: Image-to-Image Models
+      copy: 画像変換・制御
 
 about:
-  kicker: 01 — Profile
+  kicker: 02 — Profile
   title: 視覚認識と生成のあいだを研究する。
   paragraphs:
     - コンピュータビジョンと生成AIの交差領域で研究しています。見栄えのよい画像を作るだけでなく、構造を理解し、意図を保ち、異なるドメイン間で視覚情報を変換できるモデルに関心があります。
@@ -47,7 +56,7 @@ about:
   quote: 生成モデルを、優れた画像生成器から、優れた視覚的推論器へ進化させるには何が必要か。
 
 research:
-  kicker: 02 — Research
+  kicker: 03 — Research
   title: 研究テーマ
   items:
     - number: "01"
@@ -70,7 +79,7 @@ research:
         - 制御
 
 publications:
-  kicker: 03 — Selected work
+  kicker: 01 — Publications
   title: 研究成果
   intro: コンピュータビジョンと生成モデルに関する公開済みarXivプレプリントが1本、公開準備中のACCV論文が1本あります。
   items:

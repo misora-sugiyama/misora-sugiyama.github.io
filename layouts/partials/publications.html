@@ -1,0 +1,38 @@
+{{ $p := .content }}
+<section class="section publication-section" id="publications" aria-labelledby="publications-title">
+  <div class="section-label">
+    <p>{{ $p.kicker }}</p>
+  </div>
+  <div class="section-content">
+    <div class="section-heading-row">
+      <h2 id="publications-title">{{ $p.title }}</h2>
+      <p>{{ $p.intro }}</p>
+    </div>
+    <div class="publication-list">
+      {{ range $index, $item := $p.items }}
+        <article class="publication-card">
+          <div class="publication-index">
+            <span>{{ printf "%02d" (add $index 1) }}</span>
+            <time>{{ $item.year }}</time>
+          </div>
+          <div class="publication-main">
+            <p class="publication-status">{{ $item.status }}</p>
+            <h3>{{ $item.title }}</h3>
+            {{ with $item.authors }}<p class="publication-authors">{{ . }}</p>{{ end }}
+            <p>{{ $item.copy }}</p>
+            <div class="tag-list">
+              {{ range $item.tags }}<span>{{ . }}</span>{{ end }}
+            </div>
+            {{ with $item.url }}
+              <a class="publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+                {{ $item.linkLabel }} <span aria-hidden="true">↗</span>
+              </a>
+            {{ end }}
+          </div>
+          <span class="publication-symbol" aria-hidden="true">◇</span>
+        </article>
+      {{ end }}
+    </div>
+    <p class="publication-note">{{ $p.note }}</p>
+  </div>
+</section>

@@ -9,37 +9,46 @@ nav:
   label: Primary navigation
   menu: Menu
   items:
-    - id: about
-      label: About
-    - id: research
-      label: Research
     - id: publications
       label: Publications
+    - id: research
+      label: Research
+    - id: about
+      label: About
     - id: affiliations
       label: Affiliations
     - id: contact
       label: Contact
 
 hero:
-  eyebrow: Computer Vision · Generative AI
-  lineOne: Exploring how machines
-  emphasis: see, translate,
-  lineTwo: and imagine.
+  eyebrow: Research profile
+  name: Misora Sugiyama
+  nameSecondary: 杉山 未空
+  role: Computer Vision · Image & Video Generation
   intro: Misora Sugiyama researches computer vision and generative modeling, with a focus on image and video generation and image-to-image translation.
-  affiliation: Affiliated with NYU Tandon School of Engineering, LIMIT Lab, and cvpaper.challenge.
-  cta: Explore research
-  visualAlt: Abstract visualization of a generative vision pipeline
-  visualLabels:
-    - INPUT
-    - LATENT
-    - MOTION
-    - OUTPUT
-  fieldLabel: Research field
-  fieldTitle: Visual Intelligence
-  fieldCopy: Connecting perception and generation to build visual systems that are expressive, controllable, and useful.
+  affiliations:
+    - NYU Tandon School of Engineering
+    - LIMIT Lab
+    - cvpaper.challenge
+  links:
+    email: Email
+    orcid: ORCID
+    linkedin: LinkedIn
+  researchLabel: Research interests
+  researchTitle: Current focus
+  researchCopy: Visual models that connect perception, generation, and controllable translation.
+  interests:
+    - title: Computer Vision
+      copy: Representation & understanding
+    - title: Image Generation
+      copy: Generative modeling
+    - title: Video Generation
+      copy: Temporal synthesis
+    - title: Image-to-Image Models
+      copy: Translation & control
 
 about:
-  kicker: 01 — About
+  kicker: 02 — About
   title: Between visual perception and synthesis.
   paragraphs:
     - My work sits at the intersection of computer vision and generative AI. I am interested in models that do more than create convincing pixels—models that understand structure, preserve intent, and translate visual information across domains.
@@ -47,7 +56,7 @@ about:
   quote: How can generative models become better visual reasoners—not only better image makers?
 
 research:
-  kicker: 02 — Research
+  kicker: 03 — Research
   title: Research directions
   items:
     - number: "01"
@@ -70,7 +79,7 @@ research:
         - Control
 
 publications:
-  kicker: 03 — Selected work
+  kicker: 01 — Publications
   title: Publications
   intro: One public arXiv preprint and one forthcoming ACCV manuscript spanning computer vision and generative modeling.
   items:

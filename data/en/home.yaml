@@ -72,23 +72,27 @@ research:
 publications:
   kicker: 03 — Selected work
   title: Publications
-  intro: Two arXiv preprints spanning computer vision and generative modeling.
+  intro: One public arXiv preprint and one forthcoming ACCV manuscript spanning computer vision and generative modeling.
   items:
     - year: "2025"
-      status: ICCV 2025 Workshop
-      title: Workshop paper
-      copy: Full title, author list, abstract, and arXiv link will be added when the public wording is confirmed.
+      status: arXiv · ICCV 2025 Workshop
+      title: Simple Visual Artifact Detection in Sora-Generated Videos
+      authors: Misora Sugiyama, Hirokatsu Kataoka
+      copy: A multi-label framework for detecting four common types of visual artifacts in Sora-generated videos, achieving 94.14% average classification accuracy with ResNet-50.
+      url: https://arxiv.org/abs/2504.21334
+      linkLabel: View on arXiv
+      tags:
+        - Video Generation
+        - Artifact Detection
+        - Multi-label Classification
+    - year: Forthcoming
+      status: ACCV submission · arXiv upload in preparation
+      title: ACCV manuscript
+      copy: The arXiv version is currently being prepared. The title, author list, abstract, and link will be added after upload.
       tags:
         - Computer Vision
         - Generative Models
-    - year: Current
-      status: Preprint · Under review
-      title: Generative vision study
-      copy: Full title, author list, abstract, and arXiv link will be added following the review process.
-      tags:
-        - Image / Video
-        - Image-to-Image
-  note: Submission details are intentionally kept minimal while the current manuscript is under review.
+  note: Details for the ACCV manuscript will be updated as soon as the arXiv version is public.
 
 affiliations:
   kicker: 04 — Community

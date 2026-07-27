@@ -632,6 +632,33 @@ blockquote::before {
   font-size: 0.85rem;
 }
 
+.publication-main .publication-authors {
+  margin: 0.55rem 0 0;
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.publication-link {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-top: 1.35rem;
+  padding-bottom: 0.3rem;
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.publication-link:hover,
+.publication-link:focus-visible {
+  color: var(--coral);
+  border-color: var(--coral);
+}
+
 .publication-symbol {
   align-self: center;
   color: var(--aqua);

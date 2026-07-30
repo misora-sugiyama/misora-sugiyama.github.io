@@ -9,12 +9,16 @@ nav:
   label: Primary navigation
   menu: Menu
   items:
+    - id: profile
+      label: Profile
     - id: publications
       label: Publications
+    - id: news
+      label: What's new?
     - id: research
-      label: Research
+      label: Projects
     - id: about
-      label: About
+      label: Bio
     - id: affiliations
       label: Affiliations
     - id: contact
@@ -48,16 +52,17 @@ hero:
       copy: Translation & control
 
 about:
-  kicker: 02 — About
-  title: Between visual perception and synthesis.
+  kicker: 01 — Profile
+  sectionKicker: 05 — Bio
+  title: Bio.
   paragraphs:
     - My work sits at the intersection of computer vision and generative AI. I am interested in models that do more than create convincing pixels—models that understand structure, preserve intent, and translate visual information across domains.
     - Current interests include image and video generation, image-to-image models, controllable synthesis, and the representations that connect perception with generation.
   quote: How can generative models become better visual reasoners—not only better image makers?
 
 research:
-  kicker: 03 — Research
-  title: Research directions
+  kicker: 04 — Projects
+  title: Research projects
   items:
     - number: "01"
       title: Computer Vision
@@ -79,8 +84,8 @@ research:
         - Control
 
 publications:
-  kicker: 01 — Publications
-  title: Publications
+  kicker: 02 — Publications
+  title: Selected publications
   intro: One public arXiv preprint and one forthcoming ACCV manuscript spanning computer vision and generative modeling.
   items:
     - year: "2025"
@@ -103,8 +108,19 @@ publications:
         - Generative Models
   note: Details for the ACCV manuscript will be updated as soon as the arXiv version is public.
 
+news:
+  kicker: 03 — What's new?
+  title: What's new?
+  linkLabel: View
+  items:
+    - date: Apr. 2025
+      copy: “Simple Visual Artifact Detection in Sora-Generated Videos” is now available on arXiv.
+      url: https://arxiv.org/abs/2504.21334
+    - date: "2025"
+      copy: The work on visual artifact detection in generated videos was presented through an ICCV 2025 Workshop.
+
 affiliations:
-  kicker: 04 — Community
+  kicker: 06 — Affiliations
   title: Affiliations
   items:
     - mark: NYU
@@ -118,8 +134,8 @@ affiliations:
       copy: Computer vision community
 
 contact:
-  kicker: 05 — Contact
-  title: Let’s talk about visual intelligence.
+  kicker: 07 — Contact
+  title: Contact
   copy: For research inquiries, talks, or potential collaborations, feel free to get in touch.
   linkLabel: Email Misora
 

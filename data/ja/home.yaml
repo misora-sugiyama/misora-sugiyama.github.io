@@ -9,12 +9,16 @@ nav:
   label: メインナビゲーション
   menu: メニュー
   items:
+    - id: profile
+      label: プロフィール
     - id: publications
       label: 研究成果
+    - id: news
+      label: お知らせ
     - id: research
-      label: 研究
+      label: 研究テーマ
     - id: about
-      label: プロフィール
+      label: 略歴
     - id: affiliations
       label: 所属
     - id: contact
@@ -48,15 +52,16 @@ hero:
       copy: 画像変換・制御
 
 about:
-  kicker: 02 — Profile
-  title: 視覚認識と生成のあいだを研究する。
+  kicker: 01 — Profile
+  sectionKicker: 05 — Bio
+  title: プロフィール
   paragraphs:
     - コンピュータビジョンと生成AIの交差領域で研究しています。見栄えのよい画像を作るだけでなく、構造を理解し、意図を保ち、異なるドメイン間で視覚情報を変換できるモデルに関心があります。
     - 現在の主な関心は、画像・動画生成、Image-to-Imageモデル、制御可能な生成、そして認識と生成を結ぶ表現学習です。
   quote: 生成モデルを、優れた画像生成器から、優れた視覚的推論器へ進化させるには何が必要か。
 
 research:
-  kicker: 03 — Research
+  kicker: 04 — Projects
   title: 研究テーマ
   items:
     - number: "01"
@@ -79,8 +84,8 @@ research:
         - 制御
 
 publications:
-  kicker: 01 — Publications
-  title: 研究成果
+  kicker: 02 — Publications
+  title: 主要な研究成果
   intro: コンピュータビジョンと生成モデルに関する公開済みarXivプレプリントが1本、公開準備中のACCV論文が1本あります。
   items:
     - year: "2025"
@@ -103,8 +108,19 @@ publications:
         - 生成モデル
   note: ACCV論文の詳細は、arXiv版の公開後すぐに更新します。
 
+news:
+  kicker: 03 — What's new?
+  title: お知らせ
+  linkLabel: 詳細
+  items:
+    - date: 2025年4月
+      copy: 「Simple Visual Artifact Detection in Sora-Generated Videos」をarXivで公開しました。
+      url: https://arxiv.org/abs/2504.21334
+    - date: 2025年
+      copy: 生成動画の視覚的アーティファクト検出に関する研究をICCV 2025 Workshopで発表しました。
+
 affiliations:
-  kicker: 04 — Community
+  kicker: 06 — Affiliations
   title: 所属・コミュニティ
   items:
     - mark: NYU
@@ -118,8 +134,8 @@ affiliations:
       copy: Computer vision community
 
 contact:
-  kicker: 05 — Contact
-  title: 視覚知能について話しましょう。
+  kicker: 07 — Contact
+  title: 連絡先
   copy: 研究、講演、共同研究などに関するご連絡は、メールでお気軽にお寄せください。
   linkLabel: メールを送る
 

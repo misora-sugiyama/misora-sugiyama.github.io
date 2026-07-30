@@ -4,75 +4,98 @@
 
   <a class="skip-link" href="#main">{{ $c.skip }}</a>
 
-  <header class="site-header">
-    <a class="brand" href="{{ relLangURL "" }}" aria-label="{{ $c.brand.ariaLabel }}">
-      <span class="brand-mark" aria-hidden="true">MS</span>
-      <span class="brand-name">
-        {{ $c.brand.name }}
-        <small>{{ $c.brand.nameJa }}</small>
-      </span>
-    </a>
+  <header class="side-header">
+    <div class="side-header-top">
+      <a class="side-brand" href="#home" aria-label="{{ $c.brand.ariaLabel }}">
+        <span class="side-brand-mark" aria-hidden="true">MS</span>
+        <span>
+          <strong>{{ $c.brand.name }}</strong>
+          <small>{{ $c.brand.nameJa }}</small>
+        </span>
+      </a>
 
-    <nav class="desktop-nav" aria-label="{{ $c.nav.label }}">
-      {{ range $c.nav.items }}
-        <a href="#{{ .id }}">{{ .label }}</a>
+      <details class="mobile-menu">
+        <summary>{{ $c.nav.menu }}</summary>
+        <nav aria-label="{{ $c.nav.label }}">
+          {{ range $c.nav.items }}
+            <a href="#{{ .id }}">{{ .label }}</a>
+          {{ end }}
+          {{ range $.Translations }}
+            <a href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.Label }}</a>
+          {{ end }}
+        </nav>
+      </details>
+    </div>
+
+    <nav class="side-nav" aria-label="{{ $c.nav.label }}">
+      {{ range $index, $item := $c.nav.items }}
+        <a href="#{{ $item.id }}">
+          <span>{{ printf "%02d" (add $index 1) }}</span>
+          {{ $item.label }}
+        </a>
       {{ end }}
     </nav>
 
-    {{ range .Translations }}
-      <a class="language-switch" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">
-        {{ .Language.Label }}
-      </a>
-    {{ end }}
-
-    <details class="mobile-menu">
-      <summary>{{ $c.nav.menu }}</summary>
-      <nav aria-label="{{ $c.nav.label }}">
-        {{ range $c.nav.items }}
-          <a href="#{{ .id }}">{{ .label }}</a>
-        {{ end }}
-        {{ range .Translations }}
-          <a href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.Label }}</a>
-        {{ end }}
-      </nav>
-    </details>
+    <div class="side-footer">
+      <div class="side-social">
+        <a href="mailto:{{ .Site.Params.email }}">Email</a>
+        <a href="{{ .Site.Params.orcid }}" target="_blank" rel="me noopener noreferrer">ORCID</a>
+        <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+      </div>
+      {{ range .Translations }}
+        <a class="language-switch" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">
+          <span aria-hidden="true">A / あ</span>
+          {{ .Language.Label }}
+        </a>
+      {{ end }}
+    </div>
   </header>
 
-  <main id="main">
-    <section class="profile-hero" aria-labelledby="profile-name">
-      <div class="profile-main">
-        <p class="profile-kicker">{{ $c.hero.eyebrow }}</p>
-        <div class="profile-heading">
-          <span class="profile-mark" aria-hidden="true">MS</span>
-          <div>
-            <h1 id="profile-name">{{ $c.hero.name }}</h1>
-            <p class="profile-name-secondary">{{ $c.hero.nameSecondary }}</p>
-          </div>
-        </div>
-        <p class="profile-role">{{ $c.hero.role }}</p>
+  <main class="site-main" id="main">
+    <section class="profile-masthead" id="home" aria-labelledby="profile-name">
+      <div class="masthead-copy">
+        <p>{{ $c.hero.eyebrow }}</p>
+        <h1 id="profile-name">{{ $c.hero.name }}</h1>
+        <p class="masthead-secondary">{{ $c.hero.nameSecondary }}</p>
+        <p class="masthead-role">{{ $c.hero.role }}</p>
+      </div>
+      <div class="masthead-pattern" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+    </section>
+
+    <section class="profile-panel" id="profile" aria-labelledby="profile-title">
+      <div class="portrait-frame" aria-label="{{ $c.hero.name }}">
+        <span aria-hidden="true">MS</span>
+        <small>PROFILE</small>
+      </div>
+
+      <div class="profile-details">
+        <p class="content-eyebrow">{{ $c.about.kicker }}</p>
+        <h2 id="profile-title">{{ $c.hero.name }}</h2>
+        <p class="profile-japanese-name">{{ $c.hero.nameSecondary }}</p>
         <ul class="profile-affiliations" aria-label="{{ $c.affiliations.title }}">
           {{ range $c.hero.affiliations }}<li>{{ . }}</li>{{ end }}
         </ul>
         <p class="profile-summary">{{ $c.hero.intro }}</p>
-        <div class="profile-links" aria-label="{{ $c.contact.kicker }}">
-          <a href="mailto:{{ .Site.Params.email }}">{{ $c.hero.links.email }} <span aria-hidden="true">↗</span></a>
-          <a href="{{ .Site.Params.orcid }}" target="_blank" rel="me noopener noreferrer">{{ $c.hero.links.orcid }} <span aria-hidden="true">↗</span></a>
-          <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="me noopener noreferrer">{{ $c.hero.links.linkedin }} <span aria-hidden="true">↗</span></a>
+        <div class="profile-links">
+          <a href="mailto:{{ .Site.Params.email }}">Email <span aria-hidden="true">↗</span></a>
+          <a href="{{ .Site.Params.orcid }}" target="_blank" rel="me noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
+          <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="me noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
       </div>
 
-      <aside class="research-at-glance" aria-labelledby="research-at-glance-title">
-        <div class="at-glance-heading">
-          <p>{{ $c.hero.researchLabel }}</p>
-          <h2 id="research-at-glance-title">{{ $c.hero.researchTitle }}</h2>
-          <p>{{ $c.hero.researchCopy }}</p>
-        </div>
-        <div class="interest-grid">
+      <aside class="focus-panel" aria-labelledby="focus-title">
+        <p class="content-eyebrow">{{ $c.hero.researchLabel }}</p>
+        <h2 id="focus-title">{{ $c.hero.researchTitle }}</h2>
+        <div class="focus-list">
           {{ range $index, $interest := $c.hero.interests }}
             <article>
               <span>{{ printf "%02d" (add $index 1) }}</span>
-              <h3>{{ $interest.title }}</h3>
-              <p>{{ $interest.copy }}</p>
+              <div>
+                <h3>{{ $interest.title }}</h3>
+                <p>{{ $interest.copy }}</p>
+              </div>
             </article>
           {{ end }}
         </div>
@@ -81,78 +104,91 @@
 
     {{ partial "publications.html" (dict "content" $c.publications) }}
 
-    <section class="section about-section" id="about" aria-labelledby="about-title">
-      <div class="section-label">
-        <p>{{ $c.about.kicker }}</p>
-      </div>
-      <div class="section-content about-grid">
-        <div>
-          <h2 id="about-title">{{ $c.about.title }}</h2>
-          {{ range $c.about.paragraphs }}
-            <p class="body-copy">{{ . }}</p>
-          {{ end }}
-        </div>
-        <blockquote>{{ $c.about.quote }}</blockquote>
+    <section class="content-section news-section" id="news" aria-labelledby="news-title">
+      <header class="section-header">
+        <p>{{ $c.news.kicker }}</p>
+        <h2 id="news-title">{{ $c.news.title }}</h2>
+      </header>
+      <div class="news-list">
+        {{ range $c.news.items }}
+          <article>
+            <time>{{ .date }}</time>
+            <p>{{ .copy }}</p>
+            {{ with .url }}
+              <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $c.news.linkLabel }} ↗</a>
+            {{ end }}
+          </article>
+        {{ end }}
       </div>
     </section>
 
-    <section class="section research-section" id="research" aria-labelledby="research-title">
-      <div class="section-label">
+    <section class="content-section projects-section" id="research" aria-labelledby="research-title">
+      <header class="section-header">
         <p>{{ $c.research.kicker }}</p>
-      </div>
-      <div class="section-content">
         <h2 id="research-title">{{ $c.research.title }}</h2>
-        <div class="research-list">
-          {{ range $c.research.items }}
-            <article class="research-item">
-              <span class="item-number">{{ .number }}</span>
+      </header>
+      <div class="project-grid">
+        {{ range $c.research.items }}
+          <article class="project-card">
+            <span class="project-number">{{ .number }}</span>
+            <div>
               <h3>{{ .title }}</h3>
               <p>{{ .copy }}</p>
-              <div class="tag-list" aria-label="{{ .title }}">
-                {{ range .tags }}<span>{{ . }}</span>{{ end }}
-              </div>
-            </article>
-          {{ end }}
-        </div>
+            </div>
+            <div class="tag-list" aria-label="{{ .title }}">
+              {{ range .tags }}<span>{{ . }}</span>{{ end }}
+            </div>
+          </article>
+        {{ end }}
       </div>
     </section>
 
-    <section class="section affiliations-section" id="affiliations" aria-labelledby="affiliations-title">
-      <div class="section-label">
-        <p>{{ $c.affiliations.kicker }}</p>
+    <section class="content-section bio-section" id="about" aria-labelledby="about-title">
+      <header class="section-header">
+        <p>{{ $c.about.sectionKicker }}</p>
+        <h2 id="about-title">{{ $c.about.title }}</h2>
+      </header>
+      <div class="bio-copy">
+        {{ range $c.about.paragraphs }}
+          <p>{{ . }}</p>
+        {{ end }}
       </div>
-      <div class="section-content">
+    </section>
+
+    <section class="content-section affiliations-section" id="affiliations" aria-labelledby="affiliations-title">
+      <header class="section-header">
+        <p>{{ $c.affiliations.kicker }}</p>
         <h2 id="affiliations-title">{{ $c.affiliations.title }}</h2>
-        <div class="affiliation-grid">
-          {{ range $c.affiliations.items }}
-            <article class="affiliation-card">
-              <span class="affiliation-mark">{{ .mark }}</span>
-              <div>
-                <h3>{{ .title }}</h3>
-                <p>{{ .copy }}</p>
-              </div>
-            </article>
-          {{ end }}
-        </div>
+      </header>
+      <div class="affiliation-list">
+        {{ range $c.affiliations.items }}
+          <article>
+            <span>{{ .mark }}</span>
+            <div>
+              <h3>{{ .title }}</h3>
+              <p>{{ .copy }}</p>
+            </div>
+          </article>
+        {{ end }}
       </div>
     </section>
 
     <section class="contact-section" id="contact" aria-labelledby="contact-title">
-      <p>{{ $c.contact.kicker }}</p>
       <div>
+        <p>{{ $c.contact.kicker }}</p>
         <h2 id="contact-title">{{ $c.contact.title }}</h2>
         <p>{{ $c.contact.copy }}</p>
       </div>
-      <a class="contact-link" href="mailto:{{ .Site.Params.email }}">
+      <a href="mailto:{{ .Site.Params.email }}">
         <span>{{ $c.contact.linkLabel }}</span>
         <strong>{{ .Site.Params.email }}</strong>
         <i aria-hidden="true">↗</i>
       </a>
     </section>
-  </main>
 
-  <footer>
-    <p>© {{ now.Year }} {{ $c.footer.text }}</p>
-    <a href="#main">{{ $c.footer.backToTop }} ↑</a>
-  </footer>
+    <footer>
+      <p>© {{ now.Year }} {{ $c.footer.text }}</p>
+      <a href="#home">{{ $c.footer.backToTop }} ↑</a>
+    </footer>
+  </main>
 {{ end }}

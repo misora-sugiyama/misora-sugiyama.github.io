@@ -26,6 +26,7 @@ params:
   email: contact.misora.sugiyama@gmail.com
   orcid: https://orcid.org/0009-0006-1245-8619
   linkedin: https://www.linkedin.com/in/misora-sugiyama-34a72735a/
+  photo: images/misora-sugiyama-profile.jpeg
   description: Research portfolio of Misora Sugiyama, working on computer vision, image and video generation, and image-to-image models.
 
 disableKinds:

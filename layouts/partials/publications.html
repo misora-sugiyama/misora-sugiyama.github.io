@@ -31,6 +31,6 @@
         {{ end }}
       </article>
     {{ end }}
-    <p class="publication-note">{{ $p.note }}</p>
+    {{ with $p.note }}<p class="publication-note">{{ . }}</p>{{ end }}
   </div>
 </section>

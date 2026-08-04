@@ -28,6 +28,7 @@ hero:
   eyebrow: 研究者プロフィール
   name: 杉山 未空
   nameSecondary: Misora Sugiyama
+  photoAlt: 杉山未空のプロフィール写真
   role: Computer Vision · Image & Video Generation
   intro: 杉山未空は、コンピュータビジョンと生成モデルを研究しています。特に画像・動画生成、Image-to-Imageモデルに取り組んでいます。
   affiliations:
@@ -86,8 +87,19 @@ research:
 publications:
   kicker: 02 — Publications
   title: 主要な研究成果
-  intro: コンピュータビジョンと生成モデルに関する公開済みarXivプレプリントが1本、公開準備中のACCV論文が1本あります。
+  intro: コンピュータビジョン、生成モデル、画像編集、視覚推論に関するarXivプレプリントを2本公開しています。
   items:
+    - year: "2026"
+      status: arXivプレプリント · cs.CV
+      title: Image-Space Rule Discovery
+      authors: Misora Sugiyama, Toya Oyama, Hirokatsu Kataoka
+      copy: 画像編集モデルが画像内の指示を読み取り、規則を推論し、ワークシート形式の課題を画像空間で完結できるかを評価するWISRDベンチマークを提案しました。
+      url: https://arxiv.org/abs/2608.00490
+      linkLabel: arXivで見る
+      tags:
+        - 画像編集
+        - 視覚推論
+        - ベンチマーク
     - year: "2025"
       status: arXiv · ICCV 2025 Workshop
       title: Simple Visual Artifact Detection in Sora-Generated Videos
@@ -99,20 +111,15 @@ publications:
         - 動画生成
         - アーティファクト検出
         - マルチラベル分類
-    - year: 近日公開
-      status: ACCV投稿論文 · arXiv公開準備中
-      title: ACCV論文
-      copy: 現在arXiv版のアップロードを準備しています。公開後に正式タイトル、著者一覧、概要、リンクを追加します。
-      tags:
-        - Computer Vision
-        - 生成モデル
-  note: ACCV論文の詳細は、arXiv版の公開後すぐに更新します。
 
 news:
   kicker: 03 — What's new?
   title: お知らせ
   linkLabel: 詳細
   items:
+    - date: 2026年8月
+      copy: 「Image-Space Rule Discovery」をarXivで公開しました。
+      url: https://arxiv.org/abs/2608.00490
     - date: 2025年4月
       copy: 「Simple Visual Artifact Detection in Sora-Generated Videos」をarXivで公開しました。
       url: https://arxiv.org/abs/2504.21334

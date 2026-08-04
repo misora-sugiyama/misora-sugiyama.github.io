@@ -65,9 +65,14 @@
     </section>
 
     <section class="profile-panel" id="profile" aria-labelledby="profile-title">
-      <div class="portrait-frame" aria-label="{{ $c.hero.name }}">
-        <span aria-hidden="true">MS</span>
-        <small>PROFILE</small>
+      <div class="portrait-frame">
+        <img
+          src="{{ .Site.Params.photo | relURL }}"
+          alt="{{ $c.hero.photoAlt }}"
+          width="360"
+          height="480"
+          fetchpriority="high"
+        >
       </div>
 
       <div class="profile-details">

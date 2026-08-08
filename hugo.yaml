@@ -1,4 +1,4 @@
-baseURL: https://misora-sugiyama.github.io/
+baseURL: https://misorasugiyama.com/
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 enableRobotsTXT: true
@@ -23,7 +23,7 @@ languages:
 
 params:
   author: Misora Sugiyama
-  email: contact.misora.sugiyama@gmail.com
+  email: misorasugiyama.eca@gmail.com
   orcid: https://orcid.org/0009-0006-1245-8619
   linkedin: https://www.linkedin.com/in/misora-sugiyama-34a72735a/
   photo: images/misora-sugiyama-profile.jpeg

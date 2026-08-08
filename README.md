@@ -1,6 +1,6 @@
 # Misora Sugiyama — Research Website
 
-杉山未空 / Misora Sugiyama の日英研究ウェブサイトです。Hugoで生成し、Vercelで `misorasugiyama.com` に自動公開します。
+杉山未空 / Misora Sugiyama の日英研究ウェブサイトです。Hugoで生成し、Vercelで `misorasugiyama.com` に公開します。
 
 ## ローカルで確認
 
@@ -25,4 +25,16 @@ hugo --gc --minify
 
 ## 公開
 
-GitHubリポジトリはVercelプロジェクトに接続されています。`main` ブランチへ変更を送ると、VercelがHugoをビルドして `https://misorasugiyama.com/` へ自動公開します。
+現在の本番サイトはVercelで公開しています。手動で最新版を公開する場合は次を実行します。
+
+Vercelの Production・Preview・Development には、ビルド用の環境変数 `HUGO_VERSION=0.164.0` を設定しています。
+
+```bash
+npx vercel@latest deploy --prod
+```
+
+GitHubから自動公開するには、Vercelアカウントの Login Connections でGitHubを接続した後、次を一度実行します。接続後は `main` ブランチへの変更をVercelが自動でビルドし、`https://misorasugiyama.com/` へ公開します。
+
+```bash
+npx vercel@latest git connect
+```

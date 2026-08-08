@@ -25,7 +25,7 @@ nav:
       label: 連絡先
 
 hero:
-  eyebrow: 研究者プロフィール
+  eyebrow: プロフィール
   name: 杉山 未空
   nameSecondary: Misora Sugiyama
   photoAlt: 杉山未空のプロフィール写真
@@ -40,7 +40,7 @@ hero:
     orcid: ORCID
     linkedin: LinkedIn
   researchLabel: 研究分野
-  researchTitle: 主な研究テーマ
+  researchTitle: 主なテーマ
   researchCopy: 視覚認識・生成・制御可能な変換をつなぐモデルを研究しています。
   interests:
     - title: Computer Vision
@@ -57,8 +57,8 @@ about:
   sectionKicker: 05 — Bio
   title: プロフィール
   paragraphs:
-    - コンピュータビジョンと生成AIの交差領域で研究しています。見栄えのよい画像を作るだけでなく、構造を理解し、意図を保ち、異なるドメイン間で視覚情報を変換できるモデルに関心があります。
-    - 現在の主な関心は、画像・動画生成、Image-to-Imageモデル、制御可能な生成、そして認識と生成を結ぶ表現学習です。
+    - コンピュータビジョンと生成AIを基盤に、視覚知能（Visual Intelligence）の研究に取り組んでいます。単にもっともらしい画像を生成するだけでなく、視覚的な構造を理解し、意図を保ちながら、異なるドメイン間で情報を変換できる知能の実現に関心があります。
+    - 現在の主な関心は、画像・動画生成、Image-to-Imageモデル、制御可能な生成、表現学習です。
   quote: 生成モデルを、優れた画像生成器から、優れた視覚的推論器へ進化させるには何が必要か。
 
 research:
@@ -86,11 +86,11 @@ research:
 
 publications:
   kicker: 02 — Publications
-  title: 主要な研究成果
-  intro: コンピュータビジョン、生成モデル、画像編集、視覚推論に関するarXivプレプリントを2本公開しています。
+  title: 研究成果
+  intro: コンピュータビジョン、生成モデル、画像編集、視覚推論に関するarXiv論文を2本公開しています。
   items:
     - year: "2026"
-      status: arXivプレプリント · cs.CV
+      status: arXiv論文 · cs.CV
       title: Image-Space Rule Discovery
       authors: Misora Sugiyama, Toya Oyama, Hirokatsu Kataoka
       copy: 画像編集モデルが画像内の指示を読み取り、規則を推論し、ワークシート形式の課題を画像空間で完結できるかを評価するWISRDベンチマークを提案しました。
@@ -143,7 +143,7 @@ affiliations:
 contact:
   kicker: 07 — Contact
   title: 連絡先
-  copy: 研究、講演、共同研究などに関するご連絡は、メールでお気軽にお寄せください。
+  copy: 研究、講演、共同研究などに関するご連絡は、以下のメールアドレスまでお願いいたします。
   linkLabel: メールを送る
 
 footer:

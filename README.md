@@ -1,6 +1,6 @@
 # Misora Sugiyama — Research Website
 
-杉山未空 / Misora Sugiyama の日英研究ウェブサイトです。Hugoで生成し、GitHub Pagesへ自動公開します。
+杉山未空 / Misora Sugiyama の日英研究ウェブサイトです。Hugoで生成し、Vercelで `misorasugiyama.com` に自動公開します。
 
 ## ローカルで確認
 
@@ -25,4 +25,4 @@ hugo --gc --minify
 
 ## 公開
 
-`main` ブランチへ変更を送ると、`.github/workflows/hugo.yaml` がHugoをビルドし、GitHub Pagesへ自動公開します。
+GitHubリポジトリはVercelプロジェクトに接続されています。`main` ブランチへ変更を送ると、VercelがHugoをビルドして `https://misorasugiyama.com/` へ自動公開します。

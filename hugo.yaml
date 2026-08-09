@@ -1,6 +1,6 @@
 baseURL: https://misorasugiyama.com/
 defaultContentLanguage: en
-defaultContentLanguageInSubdir: true
+defaultContentLanguageInSubdir: false
 enableRobotsTXT: true
 hasCJKLanguage: true
 title: Misora Sugiyama

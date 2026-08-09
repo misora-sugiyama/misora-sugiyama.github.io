@@ -372,20 +372,12 @@ p {
   object-position: 50% 43%;
 }
 
-.profile-details h2,
 .focus-panel h2 {
   margin: 0;
   font-size: clamp(1.8rem, 3vw, 2.65rem);
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -0.035em;
-}
-
-.profile-japanese-name {
-  margin: 0.35rem 0 0;
-  color: var(--muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.1em;
 }
 
 .profile-affiliations {
@@ -1033,15 +1025,6 @@ footer a:focus-visible {
 
   .portrait-frame small {
     display: none;
-  }
-
-  .profile-details h2 {
-    font-size: clamp(1.35rem, 6vw, 1.75rem);
-  }
-
-  .profile-japanese-name {
-    margin-top: 0.2rem;
-    font-size: 0.62rem;
   }
 
   .profile-affiliations {

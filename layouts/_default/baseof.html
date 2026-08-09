@@ -16,7 +16,11 @@
     {{ range .AllTranslations }}
       <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
     {{ end }}
-    <link rel="alternate" hreflang="x-default" href="{{ .Site.Home.Permalink }}">
+    {{ range hugo.Sites }}
+      {{ if .Language.IsDefault }}
+        <link rel="alternate" hreflang="x-default" href="{{ .Home.Permalink }}">
+      {{ end }}
+    {{ end }}
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ .Site.Title }}">

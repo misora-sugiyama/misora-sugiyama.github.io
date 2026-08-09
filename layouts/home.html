@@ -38,7 +38,7 @@
 
     <div class="side-footer">
       <div class="side-social">
-        <a href="mailto:{{ .Site.Params.email }}">Email</a>
+        <a href="#contact" data-contact="{{ .Site.Params.contactToken }}">Email</a>
         <a href="{{ .Site.Params.orcid }}" target="_blank" rel="me noopener noreferrer">ORCID</a>
         <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
       </div>
@@ -82,7 +82,7 @@
         </ul>
         <p class="profile-summary">{{ $c.hero.intro }}</p>
         <div class="profile-links">
-          <a href="mailto:{{ .Site.Params.email }}">Email <span aria-hidden="true">↗</span></a>
+          <a href="#contact" data-contact="{{ .Site.Params.contactToken }}">Email <span aria-hidden="true">↗</span></a>
           <a href="{{ .Site.Params.orcid }}" target="_blank" rel="me noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
           <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="me noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         </div>
@@ -182,9 +182,8 @@
         <h2 id="contact-title">{{ $c.contact.title }}</h2>
         <p>{{ $c.contact.copy }}</p>
       </div>
-      <a href="mailto:{{ .Site.Params.email }}">
+      <a href="#contact" data-contact="{{ .Site.Params.contactToken }}">
         <span>{{ $c.contact.linkLabel }}</span>
-        <strong>{{ .Site.Params.email }}</strong>
         <i aria-hidden="true">↗</i>
       </a>
     </section>

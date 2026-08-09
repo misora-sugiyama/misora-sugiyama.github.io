@@ -33,6 +33,8 @@
 
     {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+    {{ $contactScript := resources.Get "js/contact.js" | minify | fingerprint }}
+    <script src="{{ $contactScript.RelPermalink }}" integrity="{{ $contactScript.Data.Integrity }}" defer></script>
 
     {{ $person := dict
       "@context" "https://schema.org"
@@ -41,7 +43,6 @@
       "alternateName" "杉山未空"
       "url" .Site.BaseURL
       "image" (.Site.Params.photo | absURL)
-      "email" (printf "mailto:%s" .Site.Params.email)
       "sameAs" (slice .Site.Params.orcid .Site.Params.linkedin)
       "affiliation" (slice
         (dict "@type" "CollegeOrUniversity" "name" "NYU Tandon School of Engineering")

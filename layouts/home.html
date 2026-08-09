@@ -76,9 +76,7 @@
       </div>
 
       <div class="profile-details">
-        <p class="content-eyebrow">{{ $c.about.kicker }}</p>
-        <h2 id="profile-title">{{ $c.hero.name }}</h2>
-        <p class="profile-japanese-name">{{ $c.hero.nameSecondary }}</p>
+        <p class="content-eyebrow" id="profile-title">{{ $c.about.kicker }}</p>
         <ul class="profile-affiliations" aria-label="{{ $c.affiliations.title }}">
           {{ range $c.hero.affiliations }}<li>{{ . }}</li>{{ end }}
         </ul>

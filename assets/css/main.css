@@ -780,7 +780,8 @@ p {
 .contact-section > a {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 0.2rem 1rem;
+  gap: 1rem;
+  align-items: center;
   padding: 1rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.58);
   border-bottom: 1px solid rgba(255, 255, 255, 0.24);
@@ -788,22 +789,14 @@ p {
 
 .contact-section > a span {
   color: var(--sky);
-  font-size: 0.61rem;
+  font-size: clamp(0.78rem, 1.5vw, 1rem);
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.contact-section > a strong {
-  grid-row: 2;
-  font-size: clamp(0.78rem, 1.5vw, 1rem);
-  font-weight: 500;
-}
-
 .contact-section > a i {
-  grid-row: 1 / 3;
   grid-column: 2;
-  align-self: center;
   font-size: 1.25rem;
   font-style: normal;
 }
@@ -1169,9 +1162,6 @@ footer a:focus-visible {
     font-size: 1rem;
   }
 
-  .contact-section > a strong {
-    font-size: 0.7rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

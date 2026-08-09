@@ -143,8 +143,8 @@ affiliations:
 contact:
   kicker: 07 — Contact
   title: 連絡先
-  copy: 研究、講演、共同研究などに関するご連絡は、以下のメールアドレスまでお願いいたします。
-  linkLabel: メールを送る
+  copy: 研究、講演、共同研究などに関するご連絡は、下のボタンからお願いいたします。
+  linkLabel: お問い合わせはこちら
 
 footer:
   text: 杉山未空 — Computer Vision & Generative AI

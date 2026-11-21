@@ -22,13 +22,20 @@
             {{ range $item.tags }}<span>{{ . }}</span>{{ end }}
           </div>
         </div>
-        {{ with $item.url }}
-          <a class="publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer">
-            {{ $item.linkLabel }} <span aria-hidden="true">↗</span>
-          </a>
-        {{ else }}
-          <span class="publication-pending" aria-hidden="true">—</span>
-        {{ end }}
+        <div class="publication-links">
+          {{ with $item.url }}
+            <a class="publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+              {{ $item.linkLabel }} <span aria-hidden="true">↗</span>
+            </a>
+          {{ else }}
+            <span class="publication-pending" aria-hidden="true">—</span>
+          {{ end }}
+          {{ with $item.codeUrl }}
+            <a class="publication-link" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+              {{ $item.codeLabel }} <span aria-hidden="true">↗</span>
+            </a>
+          {{ end }}
+        </div>
       </article>
     {{ end }}
     {{ with $p.note }}<p class="publication-note">{{ . }}</p>{{ end }}

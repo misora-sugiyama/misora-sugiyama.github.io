@@ -592,6 +592,12 @@ p {
   letter-spacing: 0.04em;
 }
 
+.publication-links {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+
 .publication-link {
   display: flex;
   justify-content: space-between;
@@ -1103,7 +1109,7 @@ footer a:focus-visible {
     padding: 1.7rem 0;
   }
 
-  .publication-link,
+  .publication-links,
   .publication-pending {
     grid-column: 2;
     width: fit-content;

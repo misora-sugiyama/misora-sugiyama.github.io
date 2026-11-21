@@ -501,6 +501,11 @@ p {
   letter-spacing: -0.04em;
 }
 
+.section-header h2 {
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
+  overflow-wrap: normal;
+}
+
 .section-intro {
   max-width: 20rem;
   margin: 1.1rem 0 0;

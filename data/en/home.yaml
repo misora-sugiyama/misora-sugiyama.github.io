@@ -87,15 +87,17 @@ research:
 publications:
   kicker: 02 — Publications
   title: Selected publications
-  intro: Two public arXiv preprints spanning computer vision, generative modeling, image editing, and visual reasoning.
+  intro: Research on visual reasoning, image editing, and generative video, including work accepted at ACCV 2026.
   items:
     - year: "2026"
-      status: arXiv preprint · cs.CV
+      status: ACCV 2026 · Accepted
       title: Image-Space Rule Discovery
       authors: Misora Sugiyama, Toya Oyama, Hirokatsu Kataoka
-      copy: Introduces WISRD, a benchmark for testing whether image-editing models can interpret visual instructions, infer rules, and complete worksheet-style tasks directly in image space.
+      copy: Introduces WISP (Worksheet Image-Space Problem Solving), a benchmark of 11 tasks and eight information conditions for evaluating whether image editors can solve visual worksheets while preserving unrelated content.
       url: https://arxiv.org/abs/2608.00490
-      linkLabel: View on arXiv
+      linkLabel: Paper on arXiv
+      codeUrl: https://github.com/misora-sugiyama/WISP
+      codeLabel: Code & data
       tags:
         - Image Editing
         - Visual Reasoning
@@ -117,6 +119,9 @@ news:
   title: What's new?
   linkLabel: View
   items:
+    - date: Oct. 2026
+      copy: The camera-ready version of “Image-Space Rule Discovery,” accepted at ACCV 2026, is now available on arXiv.
+      url: https://arxiv.org/abs/2608.00490v2
     - date: Aug. 2026
       copy: “Image-Space Rule Discovery” is now available on arXiv.
       url: https://arxiv.org/abs/2608.00490

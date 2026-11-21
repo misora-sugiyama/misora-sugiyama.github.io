@@ -1,0 +1,86 @@
+name: Redirect legacy GitHub Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/pages-redirect.yml
+
+permissions: {}
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Generate redirects to the canonical website
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os
+          from pathlib import Path
+
+          output = Path(os.environ["RUNNER_TEMP"]) / "legacy-pages-redirect"
+          pages = {
+              "index.html": ("en", "https://misorasugiyama.com/"),
+              "en/index.html": ("en", "https://misorasugiyama.com/"),
+              "ja/index.html": ("ja", "https://misorasugiyama.com/ja/"),
+              "404.html": ("en", "https://misorasugiyama.com/"),
+          }
+          template = """<!doctype html>
+          <html lang="{language}">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta name="robots" content="noindex, follow">
+            <title>Misora Sugiyama — Website moved</title>
+            <link rel="canonical" href="{target}">
+            <script>
+              // Fixed destinations also handle old /ja/ paths served by 404.html.
+              const destination = new URL(
+                window.location.pathname === "/ja" || window.location.pathname.startsWith("/ja/")
+                  ? "https://misorasugiyama.com/ja/"
+                  : "https://misorasugiyama.com/"
+              );
+              destination.hash = window.location.hash;
+              window.location.replace(destination.href);
+            </script>
+            <noscript><meta http-equiv="refresh" content="0;url={target}"></noscript>
+          </head>
+          <body>
+            <main>
+              <h1>Misora Sugiyama</h1>
+              <p>This website has moved. ウェブサイトを移転しました。</p>
+              <p><a href="{target}">Continue to the website / 新しいサイトへ</a></p>
+              <p><a href="https://misorasugiyama.com/" lang="en">English</a> ·
+                 <a href="https://misorasugiyama.com/ja/" lang="ja">日本語</a></p>
+            </main>
+          </body>
+          </html>
+          """
+          for relative_path, (language, target) in pages.items():
+              page = output / relative_path
+              page.parent.mkdir(parents=True, exist_ok=True)
+              page.write_text(template.format(language=language, target=target), encoding="utf-8")
+          PY
+
+      - name: Upload redirect pages
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: ${{ runner.temp }}/legacy-pages-redirect
+
+      - name: Deploy redirect pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

@@ -87,15 +87,17 @@ research:
 publications:
   kicker: 02 — Publications
   title: 研究成果
-  intro: コンピュータビジョン、生成モデル、画像編集、視覚推論に関するarXiv論文を2本公開しています。
+  intro: ACCV 2026採択論文をはじめ、視覚推論・画像編集・動画生成に関する研究成果を紹介します。
   items:
     - year: "2026"
-      status: arXiv論文 · cs.CV
+      status: ACCV 2026 採択
       title: Image-Space Rule Discovery
       authors: Misora Sugiyama, Toya Oyama, Hirokatsu Kataoka
-      copy: 画像編集モデルが画像内の指示を読み取り、規則を推論し、ワークシート形式の課題を画像空間で完結できるかを評価するWISRDベンチマークを提案しました。
+      copy: 画像編集モデルが、入力画像上でワークシートの課題を解きながら、無関係な部分を保持できるかを評価するWISP（Worksheet Image-Space Problem Solving）ベンチマークを提案しました。11種類の課題を8つの情報条件で評価しています。
       url: https://arxiv.org/abs/2608.00490
-      linkLabel: arXivで見る
+      linkLabel: 論文（arXiv）
+      codeUrl: https://github.com/misora-sugiyama/WISP
+      codeLabel: コード・データ
       tags:
         - 画像編集
         - 視覚推論
@@ -117,6 +119,9 @@ news:
   title: お知らせ
   linkLabel: 詳細
   items:
+    - date: 2026年10月
+      copy: ACCV 2026採択論文「Image-Space Rule Discovery」のカメラレディ版をarXivで公開しました。
+      url: https://arxiv.org/abs/2608.00490v2
     - date: 2026年8月
       copy: 「Image-Space Rule Discovery」をarXivで公開しました。
       url: https://arxiv.org/abs/2608.00490
